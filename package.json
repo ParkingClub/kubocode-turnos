@@ -1,22 +1,32 @@
 {
   "name": "kubocode-turnos",
   "version": "0.1.0",
-  "private": true,
+  "description": "App de turnos con Electron y React",
+  "main": "main.js",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^13.5.0",
+    "escpos": "^3.0.0-alpha.6",
+    "escpos-usb": "^3.0.0-alpha.4",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-scripts": "5.0.1",
+    "styled-components": "^6.1.18",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "electron": "electron main.js",
+    "dev": "concurrently \"npm start\" \"npm run electron\"",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "electron": "^36.3.2",
+    "concurrently": "^8.0.0"
   },
   "eslintConfig": {
     "extends": [
